@@ -1,3 +1,7 @@
+//Usar funcoes: stat() para ver tamanho do arquivo
+//              lseek() para definir o cursor do arquivo (onde abre o arquivo)
+// Abrir o arquivo nas threads, nao na master.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <semaphore.h>
