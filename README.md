@@ -1,15 +1,12 @@
-```
-UC Sistemas Operacionais
-ICT/UNIFESP
-```
-```
-Prof. Bruno Kimura
+**UC Sistemas Operacionais
+ICT/UNIFESP**
+
+**Prof. Bruno Kimura
 bruno.kimura@unifesp.br
-19/04/2018
-```
-```
-LAB 2: Map Reduce
-```
+19/04/2018**
+
+**LAB 2: Map Reduce**
+
 **Metodologia:** Trabalho individual ou em grupo de no máximo 3 (três) alunos a ser desenvolvido
 em laboratório de informática através de codificação na linguagem C.
 
