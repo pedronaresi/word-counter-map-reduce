@@ -5,7 +5,7 @@ ICT/UNIFESP
 ```
 Prof. Bruno Kimura
 bruno.kimura@unifesp.br
-19/04/
+19/04/2018
 ```
 ```
 LAB 2: Map Reduce
@@ -13,7 +13,7 @@ LAB 2: Map Reduce
 **Metodologia:** Trabalho individual ou em grupo de no máximo 3 (três) alunos a ser desenvolvido
 em laboratório de informática através de codificação na linguagem C.
 
-**Data de entrega: 26/04/**
+**Data de entrega: 26/04/2018**
 
 **Forma de entrega:** Código .c deve ser enviado no SEAD. Insira como comentário no código o
 nome e matrícula de cada integrante do grupo.
@@ -38,30 +38,31 @@ O modelo prevê conceitualmente duas funções:
 
 - **Mapeamento** : produz um lista de pares<chave, valor> a partir de entradas
     estruturadas de pares <chave, valor> de diferentes tipos:
-       map(k1, v1) → list(k2, v2)
+       ```map(k1, v1) → list(k2, v2)```
 - **Redução** : produz um lista de valores a partir de uma entrada que consiste em uma chave e
     uma lista de valores associados a essa chave.
-       reduce(k2, list(v2)) → list(v2)
+       ```reduce(k2, list(v2)) → list(v2)```
 
 Neste exercício de laboratório, as funções de _map_ e _reduce_ podem ser representadas pelos pseudo-
 códigos abaixo. A cada ocorrência da palavra _w_ , a função map emite a palavra a contagem de
 ocorrência associada “1”. A função _reduce_ então soma todas as contagens emitidas de uma palavra
 específica _w_.
-
-**map** (String key, String value):
+```c
+map (String key, String value):
 // key: document name
 // value: document contents
 for each word w in value:
 EmitIntermediate(w, "1");
-
-
-**reduce** (String key, Iterator values):
+```
+```c
+reduce (String key, Iterator values):
 // key: a word
 // values: a list of counts
 int result = 0;
 for each v in values:
 result += ParseInt(v);
 Emit(AsString(result));
+```
 
 A Figura 1 ilustra a execução de uma implementação baseada no modelo MapReduce [1]. Nesta
 implementação, a aplicação ( _user program_ ) divide ( _split_ ) as entradas em pedaços contendo, cada
